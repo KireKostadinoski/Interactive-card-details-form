@@ -268,7 +268,6 @@ body {
     .card-back {
         position: absolute;
         top: 15px;
-        /* left: 141px; */
         z-index: 0;
     }
 
