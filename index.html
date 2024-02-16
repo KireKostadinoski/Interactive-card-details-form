@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="gradient">
+
+        <div class="card-front">
+            <img src="./images/card-logo.svg" alt="">
+
+            <div class="card-front-numbers">
+                <div class="card-number">
+                    <h2 id="cardNumb">0000 0000 0000 0000</h2>
+                </div>
+                <div class="name-expDate">
+                    <div class="card-holder">
+                        <h4 id="cardHold">JANE APLEESSED</h4>
+                    </div>
+                    <div class="exp-date">
+                        <h4><span id="cardMonth">00</span>/<span id="cardYear">00</span></h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card-back">
+            <div class="cvc">
+                <h5 id="cardCvc">000</h5>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="formDiv">
+
+
+
+        <div class="form" id="formToHide">
+            <div class="numbers">
+                <label for="">CARDHOLDER NAME</label>
+                <input type="text" name="" id="cardHolderName" placeholder="e.g. Jane Appleseed">
+                <p class="error-state" id="card-name-error">Enter your name</p>
+                <label for="">CARD NUMBER</label>
+                <input type="text" name="" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
+                <p class="error-state" id="card-number-error">Wrong format, numbers only</p>
+            </div>
+            <div class="datesCvc">
+                
+                    <div class="labels">
+                        <label for="">EXP. DATE (MM/YY)</label>
+                        <label for="">CVC</label>
+                    </div>
+                     <div class="inputs">
+                        <div>
+                            <input type="number" name="" id="exp-month" placeholder="MM" min="1" max="12">
+                            <p class="error-state" id="exp-month-error">Can't be blank</p>
+                        </div>
+                        <div>
+                            <input type="number" name="" id="exp-year" placeholder="YY" min="24" max="34">
+                            <p class="error-state" id="exp-year-error">Can't be blank</p>
+                        </div>
+                        <div>
+                            <input type="number" name="" id="cvc" placeholder="e.g. 123">
+                            <p class="error-state" id="cvc-error">Can't be blank</p>
+                        </div>
+                     </div>
+            
+    
+            </div>
+
+            <div class="confirmBtn">
+                <button type="submit" onclick="cardInput()">Confirm</button>
+            </div>
+        </div>
+
+        <div class="completed" id="completed">
+            <img src="./images/icon-complete.svg" alt="">
+            <h1>THANK YOU</h1>
+            <p>We've added your card details</p>
+            <div class="confirmBtn">
+                <button type="submit">Continue</button>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
