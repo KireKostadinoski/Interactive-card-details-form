@@ -6,8 +6,9 @@ function cardInput() {
   let cvcInput = document.getElementById("cvc").value;
 
   // Format card number input to have groups of four digits separated by spaces
-  cardNumberInput = cardNumberInput.replace(/\s+/g, ''); // Remove existing spaces
-  cardNumberInput = cardNumberInput.match(/.{1,4}/g).join(' '); // Insert spaces after every four characters
+  let cardNumberGroups = cardNumberInput.match(/.{1,4}/g);
+      cardNumberInput = cardNumberGroups ? cardNumberGroups.join(' ') : cardNumberInput;
+
 
   let debitCardPattern = /\b(?:\d[ -]*?){13,16}\b/;
 
@@ -26,20 +27,19 @@ function cardInput() {
   let form = document.getElementById("formToHide");
   let completed = document.getElementById("completed");
 
-  if (cardHolderNameInput.trim() === "") {
+  if (cardHolderNameInput === "") {
       nameError.style.display = "block";
   } else if (!debitCardPattern.test(cardNumberInput)) {
       cardNumberError.style.display = "block";
-  } else if (expMonthInput.trim() === "") {
+  } else if (expMonthInput === "" && expMonthInput.length < 2) {
       expMonthError.style.display = "block";
-  } else if (expYearInput.trim() === "") {
+  } else if (expYearInput === "") {
       expYearError.style.display = "block";
-  } else if (cvcInput.trim() === "") {
+  } else if (cvcInput === "") {
       cvcError.style.display = "block";
   } else {
-
+    form.style.display = 'none';
+    completed.style.display = 'block';
   }
 
-  form.style.display = 'none';
-  completed.style.display = 'block';
 }
