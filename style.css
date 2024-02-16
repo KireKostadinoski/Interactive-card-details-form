@@ -87,7 +87,7 @@ body {
 }
 
 .inputs input {
-    width: 90%;
+    /* width: 90%; */
     padding: 8px;
     border-radius: 5px;
     margin-right: 10px;
@@ -306,7 +306,7 @@ body {
 
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 431px) {
 
     .gradient {
          height: 40%;
@@ -320,7 +320,7 @@ body {
     .card-back {
         position: absolute;
         top: 65px;
-        left: 100px;
+        left: 50px;
         width: 260px;
         height: 140px;
     }
@@ -328,7 +328,7 @@ body {
 
     .card-front {
         position: absolute;
-        top: 135px;
+        top: 150px;
         left: 30px;
         width: 260px;
         height: 140px;
@@ -342,5 +342,4 @@ body {
     .card-number h2{
         font-size: 16px;
     }
-
 }
